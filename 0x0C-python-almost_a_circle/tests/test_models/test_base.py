@@ -1,15 +1,9 @@
 #!/usr/bin/python3
-"""Defines unittests for base.py.
+# -*- encoding: utf-8 -*-
+"""
+    This is a Unittest module
+    author: peter exwere
 
-Unittest classes:
-    TestBase_instantiation - line 21
-    TestBase_to_json_string - line 108
-    TestBase_save_to_file - line 154
-    TestBase_from_json_string - line 232
-    TestBase_create - line 286
-    TestBase_load_from_file - line 338
-    TestBase_save_to_file_csv - line 404
-    TestBase_load_from_file_csv - line 482
 """
 import os
 import unittest
@@ -495,6 +489,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
             pass
 
     def test_load_from_file_csv_first_rectangle(self):
+
         r1 = Rectangle(10, 7, 2, 8, 1)
         r2 = Rectangle(2, 4, 5, 6, 2)
         Rectangle.save_to_file_csv([r1, r2])
@@ -502,6 +497,7 @@ class TestBase_load_from_file_csv(unittest.TestCase):
         self.assertEqual(str(r1), str(list_rectangles_output[0]))
 
     def test_load_from_file_csv_second_rectangle(self):
+
         r1 = Rectangle(10, 7, 2, 8, 1)
         r2 = Rectangle(2, 4, 5, 6, 2)
         Rectangle.save_to_file_csv([r1, r2])
